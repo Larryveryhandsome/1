@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台灣不動產新人仲介生存指南</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 導航欄 -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">台灣不動產新人仲介生存指南</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">首頁</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="chaptersDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              章節內容
+            </a>
+            <div class="dropdown-menu" aria-labelledby="chaptersDropdown">
+              <a class="dropdown-item" href="pages/introduction.html">前言</a>
+              <a class="dropdown-item" href="pages/market_overview.html">市場概況</a>
+              <a class="dropdown-item" href="pages/legal_requirements.html">法規與證照</a>
+              <a class="dropdown-item" href="pages/client_acquisition.html">客戶開發與維護</a>
+              <a class="dropdown-item" href="pages/property_evaluation.html">物業評估技巧</a>
+              <a class="dropdown-item" href="pages/negotiation_skills.html">談判技巧與策略</a>
+              <a class="dropdown-item" href="pages/closing_deals.html">成交流程與後續服務</a>
+              <a class="dropdown-item" href="pages/financial_planning.html">財務規劃與收入穩定化</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              實用工具
+            </a>
+            <div class="dropdown-menu" aria-labelledby="toolsDropdown">
+              <a class="dropdown-item" href="pages/client_management_templates.html">客戶管理表格</a>
+              <a class="dropdown-item" href="pages/property_evaluation_templates.html">物件評估表</a>
+              <a class="dropdown-item" href="pages/sales_scripts.html">銷售話術</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pages/all_content.html">完整內容</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 頁面標題 -->
+  <header class="page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h1 class="page-title">台灣不動產新人仲介生存指南</h1>
+          <p class="page-subtitle">幫助剛踏入社會的新人仲介快速適應市場並開始賺錢的全方位指南</p>
+          <div class="mt-4">
+            <a href="pages/introduction.html" class="btn btn-light btn-lg mr-2">開始閱讀</a>
+            <a href="pages/all_content.html" class="btn btn-outline-light btn-lg">完整內容</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 搜索區域 -->
+  <section class="content-section bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mx-auto">
+          <div class="search-container">
+            <div class="input-group">
+              <input type="text" id="search-input" class="form-control search-input" placeholder="搜尋指南內容...">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">搜尋</button>
+              </div>
+            </div>
+            <div id="search-results" class="search-results"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主要內容區域 -->
+  <section class="content-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center mb-5">
+          <h2 class="section-title">為什麼需要這份指南？</h2>
+          <p class="lead">不動產仲介是一個充滿機會但也充滿挑戰的行業。對於剛踏入社會的新人來說，如何在這個競爭激烈的市場中站穩腳跟並快速開始賺錢，是一個重要的課題。本指南匯集了台灣不動產市場的最新趨勢、法規要求、客戶開發策略、談判技巧和財務規劃等關鍵知識，幫助新人仲介少走彎路，快速成長。</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">法規與證照取得</h5>
+              <p class="card-text">了解台灣不動產仲介相關法規，掌握證照考取流程和準備策略，確保合法執業。</p>
+              <a href="pages/legal_requirements.html" class="btn btn-outline-primary">查看詳情</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">市場分析與區域選擇</h5>
+              <p class="card-text">分析台灣不動產市場現況與趨勢，學習如何選擇適合自己發展的區域和物件類型。</p>
+              <a href="pages/market_overview.html" class="btn btn-outline-primary">查看詳情</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">客戶開發與維護</h5>
+              <p class="card-text">掌握多種客源開發方法，建立個人品牌，維護長期客戶關係，提高轉介紹率。</p>
+              <a href="pages/client_acquisition.html" class="btn btn-outline-primary">查看詳情</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">成交技巧與談判策略</h5>
+              <p class="card-text">學習專業的談判技巧，掌握價格協商方法，提高成交率和客戶滿意度。</p>
+              <a href="pages/negotiation_skills.html" class="btn btn-outline-primary">查看詳情</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">財務規劃與收入穩定化</h5>
+              <p class="card-text">制定合理的財務計劃，管理不穩定收入，建立長期穩定的財務基礎。</p>
+              <a href="pages/financial_planning.html" class="btn btn-outline-primary">查看詳情</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">實用工具與範本</h5>
+              <p class="card-text">提供客戶管理表格、物件評估表和銷售話術等實用工具，幫助新人仲介提高工作效率。</p>
+              <a href="pages/client_management_templates.html" class="btn btn-outline-primary">查看詳情</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 評論區 -->
+  <section class="content-section bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="section-title">讀者討論區</h2>
+          <div class="comment-section">
+            <form id="comment-form" class="comment-form">
+              <div class="form-group">
+                <label for="comment-name">您的姓名</label>
+                <input type="text" class="form-control" id="comment-name" placeholder="請輸入您的姓名">
+              </div>
+              <div class="form-group">
+                <label for="comment-content">評論內容</label>
+                <textarea class="form-control" id="comment-content" rows="3" placeholder="分享您的想法、經驗或問題..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">發表評論</button>
+            </form>
+            <ul id="comment-list" class="comment-list mt-4">
+              <!-- 評論將動態添加到這裡 -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁腳 -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h4 class="footer-title">台灣不動產新人仲介生存指南</h4>
+          <p>幫助剛踏入社會的新人仲介快速適應市場並開始賺錢的全方位指南</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h4 class="footer-title">快速導航</h4>
+          <ul class="footer-nav">
+            <li class="footer-nav-item"><a href="index.html" class="footer-nav-link">首頁</a></li>
+            <li class="footer-nav-item"><a href="pages/introduction.html" class="footer-nav-link">前言</a></li>
+            <li class="footer-nav-item"><a href="pages/market_overview.html" class="footer-nav-link">市場概況</a></li>
+            <li class="footer-nav-item"><a href="pages/legal_requirements.html" class="footer-nav-link">法規與證照</a></li>
+            <li class="footer-nav-item"><a href="pages/all_content.html" class="footer-nav-link">完整內容</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h4 class="footer-title">實用工具</h4>
+          <ul class="footer-nav">
+            <li class="footer-nav-item"><a href="pages/client_management_templates.html" class="footer-nav-link">客戶管理表格</a></li>
+            <li class="footer-nav-item"><a href="pages/property_evaluation_templates.html" class="footer-nav-link">物件評估表</a></li>
+            <li class="footer-nav-item"><a href="pages/sales_scripts.html" class="footer-nav-link">銷售話術</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 台灣不動產新人仲介生存指南. 版權所有.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 返回頂部按鈕 -->
+  <a href="#" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- JavaScript 文件 -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/marked/marked.min.js"></script>
+  <script src="node_modules/lunr/lunr.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
