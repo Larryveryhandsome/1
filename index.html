@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣不動產新人仲介生存指南</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script>
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; }
+        .sidebar { position: sticky; top: 20px; }
+        .search-container { margin: 20px 0; }
+        .search-results { margin-top: 10px; }
+        .section-title { color: #007bff; }
+        .content-section { margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <!-- 導航欄 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">台灣不動產新人仲介生存指南</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#introduction">導言</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#market">市場概況</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#regulations">法規與證照</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#negotiation">談判技巧</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#finance">財務規劃</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#client">客戶開發</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#closing">成交流程</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tools">實用工具</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 搜索區域 -->
+    <section class="container search-container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="input-group">
+                    <input type="text" id="search-input" class="form-control" placeholder="搜尋指南內容...">
+                    <button class="btn btn-primary" type="button" onclick="search()">搜尋</button>
+                </div>
+                <div id="search-results" class="search-results"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要內容 -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- 側邊欄 -->
+            <div class="col-lg-3 sidebar">
+                <h4>目錄</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="#introduction">導言</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#market">市場概況</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#regulations">法規與證照</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#negotiation">談判技巧</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#finance">財務規劃</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#client">客戶開發</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#closing">成交流程</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tools">實用工具</a></li>
+                </ul>
+            </div>
+
+            <!-- 內容區 -->
+            <div class="col-lg-9">
+                <section id="introduction" class="content-section">
+                    <h2 class="section-title">導言</h2>
+                    <p><strong>行業特性</strong>：不動產仲介具高度自由與彈性，收入潛力無上限，但競爭激烈，初期收入不穩定，需專業性與社交能力並重。</p>
+                    <p><strong>新人挑戰</strong>：客源不足、知識經驗有限、收入波動、心理壓力大、時間管理困難。</p>
+                    <p><strong>成功路徑</strong>：
+                        <ul>
+                            <li>0-3個月：入行準備，考取營業員證照，熟悉流程。</li>
+                            <li>3-12個月：基礎發展，建立客戶基礎，月收入3-5萬。</li>
+                            <li>1-2年：穩定成長，擴大網絡，月收入6-10萬。</li>
+                            <li>2-5年：專業精進，成為專家，月收入10-20萬。</li>
+                        </ul>
+                    </p>
+                </section>
+
+                <section id="market" class="content-section">
+                    <h2 class="section-title">市場概況</h2>
+                    <p><strong>2025年現況</strong>：市場復甦，房價上漲3-5%，交易量增長，但呈「價平量縮」趨勢。住宅市場弱，商用不動產較佳。</p>
+                    <p><strong>趨勢</strong>：短期溫和上漲，區域分化加劇，小坪數、綠建築需求增。中長期看，都更、智能家居、租賃市場活躍。</p>
+                    <p><strong>區域特性</strong>：
+                        <ul>
+                            <li><strong>台北市</strong>：高房價，豪宅和都更案熱，競爭激烈。</li>
+                            <li><strong>新北市</strong>：首購族需求大，捷運沿線潛力高。</li>
+                            <li><strong>桃園市</strong>：航空城帶動，新興區投資熱點。</li>
+                            <li><strong>台中市</strong>：生活品質高，新建案多。</li>
+                            <li><strong>台南/高雄</strong>：發展潛力大，投資門檻低。</li>
+                        </ul>
+                    </p>
+                    <p><strong>物件類型</strong>：住宅（公寓、大樓、透天）、商用（店面、辦公室、廠房）、特殊（預售屋、土地）各有市場表現。</p>
+                </section>
+
+                <section id="regulations" class="content-section">
+                    <h2 class="section-title">法規與證照</h2>
+                    <p><strong>核心法規</strong>：《不動產經紀業管理條例》規範資格、業務和責任；《公平交易法》《消費者保護法》保障交易公平。</p>
+                    <p><strong>證照</strong>：
+                        <ul>
+                            <li><strong>營業員</strong>：20歲以上，30小時訓練，通過測驗，通過率40-50%。</li>
+                            <li><strong>經紀人</strong>：通過專業考試，難度高，通過率10-20%，可獨立執業。</li>
+                        </ul>
+                    </p>
+                    <p><strong>考試準備</strong>：營業員需2-3個月，經紀人6-12個月，重點法規、實務、民法、土地法。</p>
+                    <p><strong>執業規範</strong>：合法證照、廣告真實、佣金上限6%、保密義務，違規可罰款或停業。</p>
+                </section>
+
+                <section id="negotiation" class="content-section">
+                    <h2 class="section-title">談判技巧</h2>
+                    <p><strong>重要性</strong>：影響價格、條件和關係，提升成交率和收入。</p>
+                    <p><strong>準備</strong>：市場分析、客戶需求評估、策略設定。</p>
+                    <p><strong>技巧</strong>：積極傾聽、錨定價格、創造性條件交換，應對強硬對手和僵局。</p>
+                    <p><strong>案例</strong>：低出價用數據反擊，高要價教育市場，僵局創新條件。</p>
+                </section>
+
+                <section id="finance" class="content-section">
+                    <h2 class="section-title">財務規劃</h2>
+                    <p><strong>收入特性</strong>：佣金制（成交價2-6%），波動大，初期不穩，實際到手30-60%。</p>
+                    <p><strong>初期策略</strong>：準備6個月生活費+3個月業務費（10-15萬），控制支出，加速成交。</p>
+                    <p><strong>長期目標</strong>：穩定收入（客戶多元化、推薦系統），多元來源（租賃、顧問），財務自由。</p>
+                    <p><strong>佣金結構</strong>：高專制（50-80%無底薪）、普專制（8-30%有底薪）、混合制（彈性調整）。</p>
+                </section>
+
+                <section id="client" class="content-section">
+                    <h2 class="section-title">客戶開發</h2>
+                    <p><strong>重要性</strong>：客戶是業務基礎，開發穩定客源是成功關鍵。</p>
+                    <p><strong>管道</strong>：商圈掃街、空屋查詢、社群媒體、人脈網絡、線上平台、異業合作、舊客戶再開發。</p>
+                    <p><strong>技巧</strong>：專業信任、有效溝通、需求挖掘、CRM管理，建立長期網絡。</p>
+                    <p><strong>階段路徑</strong>：0-3個月基礎建設，3-6個月積極拓展，6-12個月系統優化。</p>
+                </section>
+
+                <section id="closing" class="content-section">
+                    <h2 class="section-title">成交流程</h2>
+                    <p><strong>流程</strong>：前置準備（斡旋要約、產權調查）、簽約、過戶準備（貸款申請）、過戶交屋、後續服務。</p>
+                    <p><strong>仲介角色</strong>：協調者、顧問、執行者、監督者，提供全流程服務。</p>
+                    <p><strong>風險管理</strong>：法律、財務、物理、流程風險，需預防和應對糾紛。</p>
+                </section>
+
+                <section id="tools" class="content-section">
+                    <h2 class="section-title">實用工具</h2>
+                    <p><strong>客戶管理表格</strong>：基本資料、需求追蹤、互動記錄、關係維護表。</p>
+                    <p><strong>其他工具</strong>：預算模板、現金流預測、業績追蹤、成交管理表。</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 搜索數據
+        const searchData = [
+            { id: "introduction", title: "導言", content: "行業特性、新人挑戰、成功路徑", excerpt: "不動產仲介具高度自由與彈性，收入潛力無上限..." },
+            { id: "market", title: "市場概況", content: "2025年現況、趨勢、區域特性、物件類型", excerpt: "市場復甦，房價上漲3-5%，交易量增長..." },
+            { id: "regulations", title: "法規與證照", content: "核心法規、證照要求、考試準備、執業規範", excerpt: "《不動產經紀業管理條例》規範資格..." },
+            { id: "negotiation", title: "談判技巧", content: "重要性、準備、技巧、案例", excerpt: "談判影響價格、條件和關係..." },
+            { id: "finance", title: "財務規劃", content: "收入特性、初期策略、長期目標、佣金結構", excerpt: "佣金制收入波動大，初期需準備6個月生活費..." },
+            { id: "client", title: "客戶開發", content: "重要性、管道、技巧、階段路徑", excerpt: "客戶是業務基礎，開發管道包括商圈掃街..." },
+            { id: "closing", title: "成交流程", content: "流程、仲介角色、風險管理", excerpt: "從斡旋要約到交屋，提供全流程服務..." },
+            { id: "tools", title: "實用工具", content: "客戶管理表格、其他工具", excerpt: "基本資料、需求追蹤、預算模板..." }
+        ];
+
+        // 初始化搜索索引
+        const idx = lunr(function () {
+            this.field('title');
+            this.field('content');
+            this.ref('id');
+            searchData.forEach(item => this.add(item));
+        });
+
+        // 搜索功能
+        function search() {
+            const query = document.getElementById('search-input').value;
+            const results = idx.search(query);
+            const resultsDiv = document.getElementById('search-results');
+            resultsDiv.innerHTML = '';
+
+            if (query.length < 2) return;
+            if (results.length === 0) {
+                resultsDiv.innerHTML = '<p>沒有找到相關結果</p>';
+                return;
+            }
+
+            let html = '<div class="list-group">';
+            results.forEach(result => {
+                const item = searchData.find(i => i.id === result.ref);
+                html += `
+                    <a href="#${item.id}" class="list-group-item list-group-item-action">
+                        <h5>${item.title}</h5>
+                        <p>${item.excerpt}</p>
+                    </a>
+                `;
+            });
+            html += '</div>';
+            resultsDiv.innerHTML = html;
+        }
+
+        // 平滑滾動
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
